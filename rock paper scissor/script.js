@@ -60,10 +60,10 @@ function playRound(scores){
 
 function playGame(){
     
-let scores = {
-    player: 0,
-    computer:  0
-}
+    let scores = {
+        player: 0,
+        computer:  0
+    }
     for (let i = 0; i < 5; i++) {
         playRound(scores)
     }
