@@ -30,6 +30,7 @@ body{
 #play-area{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #play-area button{
@@ -61,4 +62,15 @@ body{
 
 #play-paper{
     background-color: var(--play-bt-paper);
+}
+
+#round-select{
+    height: 60px;
+    width: 95px;
+    border: 5px solid;
+    font-size: larger;
+    text-align: center;
+}
+#round-select:focus-visible{
+    border: 5px solid;
 }

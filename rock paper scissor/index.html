@@ -18,7 +18,8 @@
     </div>
 </div>
 <div id="play-area">
-    <button id="play-again" onclick="playGame()">▶️</button>
+    <input type="number" name="rounds-selector" id="round-select" value="1" min="1">
+    <button id="play-again" onclick="playGame(scores)">▶️</button>
     <button id="play-rock" hidden>🪨</button>
     <button id="play-scissor" hidden>✂️</button>
     <button id="play-paper" hidden>📄</button>

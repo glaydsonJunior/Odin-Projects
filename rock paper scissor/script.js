@@ -37,35 +37,59 @@ function convert(n){
     if(n == 3) return "Rock"
 }
 
-function playRound(scores){
-    const human = getHumanChoice()
-    const cpu = getComputerChoice()
-    const result = compare(Number.parseInt(human), cpu)
-    console.log(result)
-    switch(result){
-        case 1:
-            console.log(`Player: ${convert(human)} x Computer: ${convert(cpu)} - Player Wins`)
-            scores.player = scores.player+1;
-            break;
-        case 0:
-            console.log(`Player: ${convert(human)} x Computer: ${convert(cpu)} - Draw!`)
-            break;
-        case -1:
-            console.log(`Player: ${convert(human)} x Computer: ${convert(cpu)} - Computer Wins`)
-            scores.computer = scores.computer+1
-            break;
+function play(score, choice){
+    if(score.counter > 0){
+        score.counter -= 1;
+        const cpu = getComputerChoice()
+        const result = compare(choice, cpu)
+        switch(result){
+            case 1:
+                console.log(`Player Wins`)
+                score.player = score.player+1;
+                break;
+            case 0:
+                console.log(`Draw!`)
+                break;
+            case -1:
+                console.log(`Computer Wins`)
+                score.computer = score.computer+1
+                break;
+        }
     }
-    return scores
 }
 
-function playGame(){
-    
-    let scores = {
-        player: 0,
-        computer:  0
+let scores = {
+    counter: 1,
+    player: 0,
+    computer:  0
+}
+
+
+btRock.addEventListener("click", ()=>{ 
+    play(scores, 3)  
+    if(scores.counter <= 0)buttonSwitch(0)
+    updateScore(scores)
+})
+btPaper.addEventListener("click", ()=>{ 
+    play(scores, 1) 
+    if(scores.counter <= 0)buttonSwitch(0)
+    updateScore(scores)
+})
+btScissor.addEventListener("click", ()=>{ 
+    play(scores, 2)
+    if(scores.counter <= 0)buttonSwitch(0)
+    updateScore(scores)
+})
+
+
+function playGame(score){
+    const n = Number.parseInt(roundSelect.value)
+    if(n > 0){
+        buttonSwitch(1)
+        score.counter = n;
+        score.player = 0;
+        score.computer = 0;
+        return scores
     }
-    for (let i = 0; i < 5; i++) {
-        playRound(scores)
-    }
-    return scores
+    alert("O numero de rounds deve ser maior ou igual a 1")
 }
