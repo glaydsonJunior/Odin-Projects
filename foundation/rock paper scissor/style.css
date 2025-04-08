@@ -1,0 +1,76 @@
+:root{
+    --restart-bt-color: #00a6ed;
+    --play-bt-scissor: #fffb00;
+    --play-bt-rock: #ff5100;
+    --play-bt-paper: #00ed57;
+    --background-body: #c4c4c4;
+}
+body{
+    background-color: var(--background-body);
+}
+
+#scores{
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#scores div{
+    text-align: center;
+}
+
+#scores div p{
+    font-size: 100px;
+    transition: color 0.5s;
+}
+
+
+#play-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play-area button{
+    text-align: center;
+    margin-inline: 10px;
+    width: 15vw;
+    height: 25vh;
+    font-size: 10vh;
+    border: 5px solid;
+    border-radius: 30px;
+    transition: border-radius 0.3s, box-shadow 0.5s;
+}
+
+#play-area button:hover{
+    border-radius: 0;
+}
+
+#play-again{
+    background-color: var(--restart-bt-color); 
+}
+
+#play-rock{
+    background-color: var(--play-bt-rock);
+}
+
+#play-scissor{
+    background-color: var(--play-bt-scissor);
+}
+
+#play-paper{
+    background-color: var(--play-bt-paper);
+}
+
+#round-select{
+    height: 60px;
+    width: 95px;
+    border: 5px solid;
+    font-size: larger;
+    text-align: center;
+}
+#round-select:focus-visible{
+    border: 5px solid;
+}

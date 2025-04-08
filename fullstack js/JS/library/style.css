@@ -1,0 +1,66 @@
+:root{
+    --background: #E5D9F2;
+    --background-light: #F5EFFF;
+    --background-element: #CDC1FF;
+    --background-element-dark: #A294F9;
+    --background-element-dark-hover: #6b60b2;
+}
+
+body{
+    background-color: var(--background);
+}
+
+.books-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.book-display{
+    min-width: 20vw;
+    width: fit-content;
+    height: 30vh;
+    background-color: var(--background-element);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    border: 2px solid;
+    margin: 10px;
+    font-size: 14px;
+}
+
+
+.addbook-bt{
+    background-color: var(--background-element-dark);
+    border: none;
+    border-radius: 20%;
+    transform: scale(3);
+    text-align: center;
+    position: fixed;
+    left: 95%;
+    bottom: 10%;
+    transition: bottom 0.4s, left 0.4s;
+}
+
+.addbook-bt:hover{
+    cursor: pointer;
+    left: 94%;
+    bottom: 11%;
+    box-shadow: 3px 3px black;
+}
+
+.remove-book{
+    margin-right: 75%;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    background-color: var(--background-element-dark);
+    border: 1px solid;
+}
+
+.remove-book:hover{
+    cursor: pointer;
+    background-color: var(--background-element-dark-hover);
+}

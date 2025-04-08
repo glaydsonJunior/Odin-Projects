@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissor!</title>
+</head>
+<body>
+<div id="scores">
+    <div>
+        <h1 id="score-label">Player</h1>
+        <p id="player-score">0</p>
+    </div>
+    <div>
+        <h1>CPU</h1>
+        <p id="cpu-score">0</p>
+    </div>
+</div>
+<div id="play-area">
+    <input type="number" name="rounds-selector" id="round-select" value="1" min="1">
+    <button id="play-again" onclick="playGame(scores)">▶️</button>
+    <button id="play-rock" hidden>🪨</button>
+    <button id="play-scissor" hidden>✂️</button>
+    <button id="play-paper" hidden>📄</button>
+</div>
+</body>
+    <script src="dom.js"></script>
+    <script src="script.js"></script>
+</html>
