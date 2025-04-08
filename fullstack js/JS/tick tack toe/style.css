@@ -1,0 +1,144 @@
+:root {
+    --cor-primaria: #00BCD4;
+    --cor-secundaria: #00E5FF;
+    --cor-fundo: #E0F7FA;
+    --cor-destaque: #00796B;
+    --cor-texto-primaria: #212121;
+    --cor-texto-secundario: #80CBC4;
+    --cor-erro: #D32F2F;
+    --cor-sucesso: #4CAF50;
+    --cor-primaria-hover: #00ACC1;
+    --cor-primaria-active: #0097A7;
+    --cor-secundaria-hover: #00B8D4;
+    --cor-fundo-hover: #afc1c3;
+    --cor-shadow-fundo: #0097A7;
+    --cor-secundaria-active: #00A1C1;
+    --cor-destaque-hover: #004D40;
+    --cor-sucesso-hover: #388E3C;
+    --cor-sucesso-active: #2C6F2F;
+    --cor-erro-hover: #C2185B;
+    --cor-erro-active: #B71C1C;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+}
+
+#game-bt {
+    width: 10em;
+    height: 4em;
+    border: 1px solid;
+    border-radius: 38.5px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-primaria);
+    border-color: var(--cor-primaria);
+    box-shadow: inset 0px -6px 0px 0px var(--cor-shadow-fundo);
+    margin-top: 40px;
+}
+
+#game-bt:hover {
+    background-color: var(--cor-fundo-hover);
+}
+
+#game-bt:active {
+    box-shadow: none;
+}
+
+.players-area {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    justify-content: center;
+}
+
+.square-play {
+    width: 100px;
+    height: 100px;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.players-name {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.players-name input {
+    width: 150px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-primaria);
+    text-align: center;
+    font-size: 16px;
+}
+
+.players-name input:focus {
+    border-color: var(--cor-secundaria);
+}
+
+.players-name {
+    gap: 10px;
+}
+
+.player-info-left, .player-info-right {
+    position: absolute;
+    top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.player-info-left {
+    left: 10px;
+    text-align: left;
+}
+
+.player-info-right {
+    right: 10px;
+    text-align: right;
+}
+
+#player1-name, #player2-name {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#player1-points, #player2-points {
+    font-size: 50px;
+}
+
+
+#edit-button{
+    background-color: var(--cor-fundo);
+    box-shadow: inset 0px -6px 0px 0px var(--cor-shadow-fundo);
+    color: var(--cor-texto-primaria);
+    font-size: larger;
+    width: 50px;
+    height: 55px;
+    border: 1px solid;
+    border-color: var(--cor-primaria);
+    border-radius: 10%;
+    text-align: center;
+}
+
+#edit-button:hover {
+    background-color: var(--cor-fundo-hover);
+}
+
+#edit-button:active {
+    box-shadow: none;
+}

@@ -7,47 +7,57 @@ function Node(value) {
 function Tree(){
     this.root = null
 
-    this.add = function(n, value){
-        if(this.root == null){
+    this.insert = function(value) {
+        if (this.root == null) {
             this.root = new Node(value);
-            return true
+            return true;
         }
-        if(n.value >= value){
-            if(n.left == null){
-                n.left = new Node(value)
-                return true
-            }else{
-                this.add(n.left, value)
+    
+        let currentNode = this.root;
+    
+        while (true) {
+            if (value < currentNode.value) {
+                if (currentNode.left == null) {
+                    currentNode.left = new Node(value);
+                    return true;
+                } else {
+                    currentNode = currentNode.left;
+                }
+            } else {
+                if (currentNode.right == null) {
+                    currentNode.right = new Node(value);
+                    return true;
+                } else {
+                    currentNode = currentNode.right;
+                }
             }
         }
-
-        if(n.value < value){
-            if(n.right == null){
-                n.right = new Node(value)
-                return true
-            }else{
-                this.add(n.right, value)
-            }
-        }
-
     }
-
+    
 
     this.buildTree = function(ar){ 
         for (let i = 0; i < ar.length; i++) {
-            this.add(this.root,ar[i])
+            this.insert(ar[i])
         }
         return this.root
     }
 
-    this.find = (n=this.root, v) => {
-        if(n != null){
-            if(n.value == v)return true
-            if(n.value < v)return this.find(n.right, v)
-            if(n.value > v)return this.find(n.left, v)
+
+    this.find = function(v) {
+        let temp = this.root;
+        while (temp !== null) {
+            if (temp.value === v) {
+                return temp.value;
+            }
+            if (temp.value < v) {
+                temp = temp.right;
+            } else {
+                temp = temp.left;
+            }
         }
-        return false
+        return null;
     }
+    
 }
 
 
@@ -66,4 +76,4 @@ const prettyPrint = (node, prefix = "", isLeft = true) => {
 
     let a = new Tree()
     a.buildTree([10, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324])
-    console.log(a.step(a.root, 2))
+    console.log(a.find(67))

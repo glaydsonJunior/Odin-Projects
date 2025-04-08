@@ -7,7 +7,33 @@
     <title>Game</title>
 </head>
 <body>
+    <div class="player-info-left">
+        <button id="edit-button">✎</button>
+        <p id="player1-name">Player 1</p>
+        <p id="player1-points">0</p>
+    </div>
+
+    <div class="game-container">
+        <div class="players-area">
+            <div id='a' class="square-play" style="border-top: none; border-left: none;"></div>
+            <div id='b' class="square-play" style="border-top: none;"></div>
+            <div id='c' class="square-play" style="border-right: none; border-top: none;"></div>
+            <div id='d' class="square-play" style="border-left: none;"></div>
+            <div id='e' class="square-play"></div>
+            <div id='f' class="square-play" style="border-right: none;"></div>
+            <div id='g' class="square-play" style="border-bottom: none; border-left: none;"></div>
+            <div id='h' class="square-play" style="border-bottom: none;"></div>
+            <div id='i' class="square-play" style="border-right: none; border-bottom: none;"></div>
+        </div>
+        <button id="game-bt" onclick="gameObject.resetTab()">RESET</button>
+    </div>
+
+    <div class="player-info-right">
+        <button id="edit-button">✎</button>
+        <p id="player2-name">Player 2</p>
+        <p id="player2-points">0</p>
+    </div>
     
+    <script src="game.js"></script>
 </body>
-<script src="game.js"></script>
 </html>
