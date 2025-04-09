@@ -1,0 +1,133 @@
+:root{
+    --dark-background-color: #1f2937;
+    --background-quote: #e5e7eb;
+    --main-text-color: #f9faf8;
+    --button-color: #3882f6;
+}
+body{
+    margin: 0px;
+}
+
+.main-text-color{
+    color: var(--main-text-color);
+}
+
+.header-logo-text{
+    color: var(--main-text-color);
+    font-size: 24px;
+}
+
+.hero-main-text{
+    font-size: 48px;
+    color: var(--main-text-color);
+    font-weight: 900;
+}
+
+.hero-secondary-text{
+    font-size: 18px;
+    color: var(--background-quote);
+}
+
+.info-header-text{
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--dark-background-color);
+}
+
+.quote-text{
+    font-size: 36px;
+    font-weight: light;
+    font-style:italic;
+    color: var(--dark-background-color);
+}
+
+.inline-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.small-area{
+    background-color: var(--dark-background-color);
+    height: 48px;
+}
+
+.medium-area{
+    height: 150px;
+}
+
+.big-area{
+    height: 300px;
+}
+
+.big-area-dark{
+    height: 450px;
+    background-color: var(--dark-background-color);
+}
+
+.link-space{
+    margin-inline-end: 25px;
+}
+
+.sign-button-dark{
+    color: white;
+    border: none;
+    width: 100px;
+    height: 30px;
+    background: var(--button-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.sign-button-line{
+    cursor: pointer;
+    color: white;
+    border: 2px solid;
+    width: 100px;
+    height: 30px;
+    background: var(--button-color);
+    border-radius: 5px;
+}
+
+
+.sign-area{
+    border-radius: 10px;
+    background-color: var(--button-color);
+    width: 900px;
+    height: 130px;
+}
+
+.quote-area{
+    background-color: var(--background-quote);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.box-placeholder{
+    border: 4px var(--button-color) solid ;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.margin-info-bottom{
+    margin-bottom: 50px;
+}
+
+.margin-info-top{
+    margin-top: 50px;
+}
+
+.center-copyright{
+    padding-top: 10px
+}
+
+a{
+    text-decoration: none;
+}
