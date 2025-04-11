@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="priority.css">
+</head>
+<body>
+
+    <div id="notes-area"></div>
+
+
+    <div class="new-note-dialog">
+        <div class="note-header">
+            <input type="date" name="dateLimit" id="dialog-date">
+            <input type="text" id="dialog-title" placeholder="Title">
+            <select name="priority" id="dialog-select">
+                <option value="highest">Highest</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="medium-low">Medium Low</option>
+                <option value="low">Low</option>
+                <option value="lowest">Lowest</option>
+            </select>
+        </div>
+        <textarea name="" id="dialog-description" placeholder="Description"></textarea>
+        <div class="dialog-options">
+            <button id="dialog-cancel">CANCEL</button>
+            <button id="dialog-okay">OKAY</button>
+        </div>
+    </div>
+
+
+
+    <div class="post-do" id="lowest">
+        <div class="post-header">
+          <input type="checkbox">
+          <h4>leitada</h4>
+          <button onclick="closePost()">x</button>
+        </div>
+        <div class="post-body">
+          <p>coldzeras</p>
+          <p>2025-02-09</p>
+        </div>
+      </div>
+      
+
+
+    <div class="projects-div">
+    <select class="selectProject">
+    </select>
+    <button id="addProj">✙</button>
+    </div>
+    <button class="addBtn">✙</button>
+</body>
+<script src="main.js"></script>
+<script src="dom.js"></script>
+</html>

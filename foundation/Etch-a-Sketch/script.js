@@ -11,7 +11,7 @@ grid-template-columns: repeat(${size}, 20px);`
 for (let i = 0; i < size*size; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
-    cell.addEventListener("mouseover", ()=>{cell.style = "background-color: gray;"})
+    cell.addEventListener("click", ()=>{cell.style = "background-color: gray;"})
     grid.appendChild(cell);
 }
 

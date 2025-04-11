@@ -1,0 +1,246 @@
+:root{
+    --card-highest-priority: #ff1c1c;
+    --card-highest-priority-title: #930f0f;
+    --card-high-priority: #fbc917;
+    --card-high-priority-title: #bc9710;
+    --card-medium-priority: #57e300;
+    --card-medium-priority-title: #399301;
+    --card-medium-low-priority: #00ebb0;
+    --card-medium-low-priority-title: #009e77;
+    --card-low-priority: #0012d8;
+    --card-low-priority-title: #000c93;
+    --card-lowest-priority: #b300e4;
+    --card-lowest-priority-title: #750095;
+    --bt-color: rgb(166, 166, 166);
+}
+
+
+
+.post-do {
+    box-shadow: 10px 10px 20px 0px #6f6f6f;
+    display: none;
+    flex-direction: column;
+    border: 3px solid #ccc;
+    min-height: 80vh;
+    border-radius: 15px;
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;  /* Aumentando a largura */
+}
+
+
+
+.post-header {
+    display: flex;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+.post-header input[type="checkbox"]{
+    transform: scale(1.5);
+}
+
+.post-body {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+.post-body p{
+    width: fit-content;
+}
+
+.addBtn{
+    background-color: var(--bt-color);
+    border: none;
+    border-radius: 20%;
+    transform: scale(3);
+    text-align: center;
+    position: fixed;
+    left: 95%;
+    bottom: 10%;
+    transition: bottom 0.4s, left 0.4s;
+}
+
+.addBtn:hover{
+    cursor: pointer;
+    left: 94%;
+    bottom: 11%;
+    box-shadow: 3px 3px black;
+}
+
+
+.projects-div{
+    right: 10%;
+    bottom: 10%;
+    position: fixed;
+}
+
+.selectProject{
+    font-size: 13px;
+    width: 100px;
+    height: 28px;
+    text-align: center;
+}
+
+
+
+.new-note-dialog {
+    background-color: var(--bt-color);
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    z-index: 1000;
+}
+
+.note-header {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.note-header input[type="date"],
+.note-header input[type="text"],
+.note-header select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.note-header input[type="text"] {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.dialog-options {
+    display: flex;
+    gap: 10px;
+}
+
+.dialog-options button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dialog-options button:hover {
+    background-color: #0056b3;
+}
+
+
+#notes-area{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cartao {
+    width: fit-content;
+    height: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao, .checkbox {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.botao {
+    background-color: #ffff;
+    color: white;
+    padding: 0;
+}
+
+.checkbox {
+    background-color: #28a745;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cartao:hover .botao,
+.cartao:hover .checkbox {
+    transform: translateY(-3px);
+}
+
+.botao:hover{
+  background-color:#0056b3;
+}
+.cartao:hover .checkbox {
+    background-color: #218838;
+}
+
+.cartao:hover{
+    cursor: pointer;
+}

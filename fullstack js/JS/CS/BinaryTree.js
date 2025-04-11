@@ -142,3 +142,5 @@ function prettyPrint(node, prefix = "", isLeft = true) {
     a.remove(9)
     a.remove(67)
     prettyPrint(a.root)
+
+    //calcular a profundidade e a largura, busca em largura, inOrder(callback), preOrder(callback), and postOrder(callback), isBalanced, rebalance

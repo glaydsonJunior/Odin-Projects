@@ -1,0 +1,47 @@
+#highest-prio{
+    background-color: var(--card-highest-priority);
+}
+
+#highest-prio .post-header{
+    background-color: var(--card-highest-priority-title);
+}
+
+#high-prio{
+    background-color: var(--card-high-priority);
+}
+
+#high-prio .post-header{
+    background-color: var(--card-high-priority-title);
+}
+
+#medium-prio{
+    background-color: var(--card-medium-priority);
+}
+
+#medium-prio .post-header{
+    background-color: var(--card-medium-priority-title);
+}
+
+#medium-low-prio{
+    background-color: var(--card-medium-low-priority);
+}
+
+#medium-low-prio .post-header{
+    background-color: var(--card-medium-low-priority-title);
+}
+
+#low-prio{
+    background-color: var(--card-low-priority);
+}
+
+#low-prio .post-header{
+    background-color: var(--card-low-priority-title);
+}
+
+#lowest-prio{
+    background-color: var(--card-lowest-priority);
+}
+
+#lowest-prio .post-header{
+    background-color: var(--card-lowest-priority-title);
+}

@@ -8,9 +8,13 @@ body {
 
 .grid {
     display: grid;
-    gap: 1px;
+    gap: 0px;
 }
 
 .cell {
     border: 1px solid;
+}
+div{
+    display: flex;
+    flex-direction: column-reverse;
 }
