@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="bundle.js"></script></head>
+<body>
+
+
+    <div class="centralizada">
+        <input type="text" placeholder="location" id="location-field" value="lisboa">
+        <button id="searcher">search</button>
+    </div>
+
+    <div id="weather-container"></div>
+
+
+
+</body>
+<script type="module" src="66f4982a85c94a097c0c.js"></script>
+<script src="43d246246d9af4e8b66f.js"></script>
+<script type="module">
+    import partlyCloudyDay from './assets/partly-cloudy-day.svg';
+import cloudy from './assets/cloudy.svg';
+import rain from './assets/rain.svg';
+import clearDay from './assets/clear-day.svg';
+
+
+const iconMap = {
+    'partly-cloudy-day': partlyCloudyDay,
+    'cloudy': cloudy,
+    'rain': rain,
+    'clear-day': clearDay,
+  };
+
+const btSearch = document.querySelector("#searcher")
+const locationInput = document.querySelector("#location-field")
+
+btSearch.addEventListener("click", async () => {
+    const location = locationInput.value
+    const result = await getWeather(location).then( (r) => { createWeatherHTML(r) })
+})
+
+function createWeatherHTML(data) {
+    const container = document.querySelector("#weather-container");
+    container.innerHTML = ''; // Limpa o conteúdo anterior
+  
+    // Cabeçalho
+    const head = document.createElement('div');
+    head.className = 'weather-head';
+  
+    const headImg = document.createElement('img');
+    // Usa o caminho correto para o SVG que o Webpack gerou
+    headImg.src = iconMap[data.days[0].icon] || iconMap['cloudy']; 
+    headImg.alt = data.days[0].icon;
+  
+    const headInfo = document.createElement('div');
+    headInfo.className = 'weather-head-info';
+  
+    headInfo.innerHTML = `
+        <p>Temperatura: ${Math.round((data.days[0].feelslike - 32) / 1.8)}</p>
+        <p>Humidade: ${data.days[0].humidity}%</p>
+        <p>Precipitação: ${data.days[0].precipprob}%</p>
+        <p>Vento: ${data.days[0].windspeed} m/s</p>
+    `;
+  
+    const headDescription = document.createElement('h4');
+    headDescription.textContent = data.description;
+  
+    head.appendChild(headImg);
+    head.appendChild(headInfo);
+    head.appendChild(headDescription);
+  
+    // Rodapé
+    const foot = document.createElement('div');
+    foot.className = 'weather-foot';
+  
+    data.days.slice(1, 16).forEach((day, index) => {
+      if (index === 8) foot.appendChild(document.createElement('br'));
+  
+      const footElement = document.createElement('div');
+      footElement.className = 'weather-foot-element';
+  
+      const icon = iconMap[day.icon] || iconMap['cloudy'];
+  
+      footElement.innerHTML = `
+          <img src="${icon}" alt="${day.icon}">
+          <p>${day.datetime}</p>
+          <p>Temperature: ${Math.round((day.feelslike - 32) / 1.8)}</p>
+          <p>Precipitação: ${day.precipprob}%</p>
+          <p>Vento: ${day.windspeed} m/s</p>
+      `;
+  
+      foot.appendChild(footElement);
+    });
+  
+    container.appendChild(head);
+    container.appendChild(foot);
+  
+    return container;
+  }
+
+</script>
+</html>
