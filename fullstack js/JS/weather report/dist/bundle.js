@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body, html {\r\n    margin: 0;\r\n    padding: 0;\r\n    height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    font-family: Arial, sans-serif;\r\n  }\r\n\r\n  /* Estilos da div */\r\n  .centralizada {\r\n    width: 300px;\r\n    height: 200px;\r\n    background-color: #4CAF50;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: white;\r\n    text-align: center;\r\n    border-radius: 8px;\r\n    margin-top: 50px;\r\n  }\r\n\r\n\r\n\r\n\r\n  .weather-container{\r\n    background-color: burlywood;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    gap: 100px;\r\n}\r\n\r\n.weather-head{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.weather-head-info{\r\n    display: flex;\r\n    gap: 40px;\r\n}\r\n\r\n\r\n.weather-foot{\r\n    display: flex;\r\n    gap: 10px;\r\n}\r\n\r\n.weather-foot-element{\r\n    font-size: 12px;\r\n    font-weight: bold;\r\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body, html {\r\n  margin: 0;\r\n  padding: 0;\r\n  height: 100%;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  font-family: Arial, sans-serif;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n  .centralizada {\r\n    width: 300px;\r\n    height: 200px;\r\n    background-color: #4CAF50;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    color: white;\r\n    text-align: center;\r\n    border-radius: 8px;\r\n    margin-top: 50px;\r\n  }\r\n\r\n\r\n\r\n\r\n  #weather-container{\r\n    background-color: burlywood;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    gap: 100px;\r\n}\r\n\r\n.weather-head{\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.weather-head-info{\r\n    display: flex;\r\n    gap: 40px;\r\n}\r\n\r\n\r\n.weather-foot{\r\n    display: flex;\r\n    gap: 10px;\r\n}\r\n\r\n.weather-foot-element{\r\n    font-size: 12px;\r\n    font-weight: bold;\r\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -100,13 +100,53 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/assets/clear-day.svg":
+/*!**********************************!*\
+  !*** ./src/assets/clear-day.svg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/clear-day212e04206236caeb33f8.svg\";\n\n//# sourceURL=webpack:///./src/assets/clear-day.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/cloudy.svg":
+/*!*******************************!*\
+  !*** ./src/assets/cloudy.svg ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/cloudy22e97e837933a900837f.svg\";\n\n//# sourceURL=webpack:///./src/assets/cloudy.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/partly-cloudy-day.svg":
+/*!******************************************!*\
+  !*** ./src/assets/partly-cloudy-day.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/partly-cloudy-dayb2e53053280396bfaa22.svg\";\n\n//# sourceURL=webpack:///./src/assets/partly-cloudy-day.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/rain.svg":
+/*!*****************************!*\
+  !*** ./src/assets/rain.svg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/rainf0a18c18bae7dd93dc86.svg\";\n\n//# sourceURL=webpack:///./src/assets/rain.svg?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _assets_rain_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/rain.svg */ \"./src/assets/rain.svg\");\n/* harmony import */ var _assets_clear_day_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/clear-day.svg */ \"./src/assets/clear-day.svg\");\n/* harmony import */ var _assets_partly_cloudy_day_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/partly-cloudy-day.svg */ \"./src/assets/partly-cloudy-day.svg\");\n/* harmony import */ var _assets_cloudy_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/cloudy.svg */ \"./src/assets/cloudy.svg\");\n\n\n\n\n\nconst icons = {\n  \"rain\": _assets_rain_svg__WEBPACK_IMPORTED_MODULE_1__,\n  \"clear-day\": _assets_clear_day_svg__WEBPACK_IMPORTED_MODULE_2__,\n  \"partly-cloudy-day\": _assets_partly_cloudy_day_svg__WEBPACK_IMPORTED_MODULE_3__,\n  \"cloudy\": _assets_cloudy_svg__WEBPACK_IMPORTED_MODULE_4__\n};\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -171,6 +211,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -185,6 +237,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

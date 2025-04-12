@@ -1,3 +1,4 @@
+
 const btSearch = document.querySelector("#searcher")
 const locationInput = document.querySelector("#location-field")
 
@@ -7,6 +8,9 @@ btSearch.addEventListener("click", async () => {
 })
 
 function createWeatherHTML(data) {
+
+    const icons = JSON.parse(localStorage.getItem("icons"))
+
     const container = document.querySelector("#weather-container")
     container.innerHTML = ''
 
@@ -14,7 +18,7 @@ function createWeatherHTML(data) {
     head.className = 'weather-head';
 
     const headImg = document.createElement('img');
-    headImg.src = "assets/"+data.days[0].icon+".svg";
+    headImg.src = icons[data.days[0].icon];
     headImg.alt = data.days[0].icon;
 
     console.log("./assets/"+data.days[0].icon+".svg")
@@ -47,7 +51,7 @@ function createWeatherHTML(data) {
         footElement.className = 'weather-foot-element';
 
         footElement.innerHTML = `
-            <img src="${day.icon}" alt="${day.icon}">
+            <img src="${icons[day.icon]}" alt="${day.icon}">
             <p>${day.datetime}</p>
             <p>Temperature: ${Math.round((day.feelslike-32)/1.8)}</p>
             <p>Precipitação: ${day.precipprob}%</p>
@@ -62,3 +66,5 @@ function createWeatherHTML(data) {
 
     return container;
 }
+
+

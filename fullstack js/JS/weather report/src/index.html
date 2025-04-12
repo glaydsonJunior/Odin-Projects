@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
     <div class="centralizada">
         <input type="text" placeholder="location" id="location-field" value="">
         <button id="searcher">search</button>
@@ -15,9 +14,10 @@
 
     <div id="weather-container"></div>
 
+    <!-- Include only the bundle.js from Webpack -->
+    <script src="../dist/bundle.js"></script> <!-- O arquivo gerado pelo Webpack -->
+    <script src="consume.js"></script> <!-- Seu arquivo consume.js -->
+    <script src="ui.js" type="module"></script> <!-- Seu arquivo ui.js como módulo -->
 
 </body>
-<script type="module" src="index.js"></script>
-<script src="consume.js"></script>
-<script src="ui.js" type="module"></script>
 </html>
