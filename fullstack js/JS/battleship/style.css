@@ -1,0 +1,41 @@
+:root {
+    --background-main: #EFEFEF;
+    --gameboard-background: #848383;
+    --dark-main: #0A1931;
+    --player-blue-color: #185ADB;
+    --player-yellow-color: #FFC947;
+    --square-color: #1f1f1f;
+}
+
+body {
+    background-color: var(--background-main);
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    gap: 40px;
+    justify-content: center; /* Center the gameboard */
+}
+
+.gameboard-player {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(10, 45px); /* 10 columns of 50px each */
+    grid-template-rows: repeat(10, 45px); /* 10 rows of 50px each */
+    gap: 5px; /* Optional: space between squares */
+    margin-top: 60px;
+    background-color: var(--gameboard-background);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.place-square {
+    width: 45px;
+    height: 45px;
+    background-color: var(--square-color);
+    border-radius: 5px;
+}
+
+#player-blue{
+}
+
+#player-yellow{
+}
