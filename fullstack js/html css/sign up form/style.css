@@ -1,0 +1,103 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.sign-up-form-geral {
+    display: flex;
+    height: 100vh;
+}
+
+.sign-up-form-banner {
+    background-image: url('./assets/plants-back.jpg');
+    background-size: cover;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width: 100px;
+    margin-right: 20px; /* Space between image and text */
+}
+
+#logo h1 {
+    font-family: Norse-Bold;
+    font-size: 60px;
+    margin: 0;
+}
+
+.sign-up-form-user {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-up-form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px; /* Space between inputs */
+    margin-bottom: 20px;
+}
+
+.sign-up-form-fields label {
+    margin-bottom: 5px;
+    display: block; /* Ensure label takes full width */
+}
+
+.sign-up-form-fields input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent black */
+    color: white;
+    width: 100%; /* Full width of the grid cell */
+}
+
+.sign-up-form-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-form-options button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sign-up-form-options button:hover {
+    background-color: #0056b3;
+}
+
+.sign-up-form-options p {
+    margin-top: 10px;
+}
+
+.sign-up-form-options a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.sign-up-form-options a:hover {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url('./assets/Norse-Bold.otf');
+}
