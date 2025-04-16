@@ -4,39 +4,49 @@ class Gameboard {
         this.actual = null
     }
 
-    futureMove(pos){
-        const r = []
-        if((pos[0]+2 >= 0 && pos[1]+1 >= 0) && (pos[0]+2 <= 7 && pos[1]+1 <= 7))r.push([pos[0]+2, pos[1]+1])
-        if((pos[0]+2 >= 0 && pos[1]-1 >= 0) && (pos[0]+2 <= 7 && pos[1]-1 <= 7))r.push([pos[0]+2, pos[1]-1])
-        if((pos[0]-2 >= 0 && pos[1]+1 >= 0) && (pos[0]-2 <= 7 && pos[1]+1 <= 7))r.push([pos[0]-2, pos[1]+1])
-        if((pos[0]-2 >= 0 && pos[1]-1 >= 0) && (pos[0]-2 <= 7 && pos[1]-1 <= 7))r.push([pos[0]-2, pos[1]-1])
-        if((pos[0]+1 >= 0 && pos[1]+2 >= 0) && (pos[0]+1 <= 7 && pos[1]+2 <= 7))r.push([pos[0]+1, pos[1]+2])
-        if((pos[0]-1 >= 0 && pos[1]+2 >= 0) && (pos[0]-1 <= 7 && pos[1]+2 <= 7))r.push([pos[0]-1, pos[1]+2])
-        if((pos[0]+1 >= 0 && pos[1]-2 >= 0) && (pos[0]+1 <= 7 && pos[1]-2 <= 7))r.push([pos[0]+1, pos[1]-2])
-        if((pos[0]-1 >= 0 && pos[1]-2 >= 0) && (pos[0]-1 <= 7 && pos[1]-2 <= 7))r.push([pos[0]-1, pos[1]-2])
-        
-        return r   
-    }
-
-
     knightMoves(cords){
-        let moves = this.futureMove(cords[0])
-        let aprox = cords[1][0]-cords[1][1]
-        for (let i = 0; i < moves.length; i++) {
-            if(moves[i][0]-moves[i][1]<aprox){
-                aprox = moves[i][0]-moves[i][1]
-                console.log(moves[i])
-                const temp = this.futureMove(moves[i])
-                for (let j = 0; j < moves[i].length; j++) {
-                    console.log(temp[i])
+        const future = [
+            [2, -1],
+            [2, 1],
+            [-2, 1],
+            [-2, -1],
+            [1, 2],
+            [-1, 2],
+            [1, -2],
+            [-1, -2]
+        ]
+        const moves = [[cords[0],[]]]
+        let temp = moves[0][0].toString()
+        let visited = new Set();
+        visited.add(temp)
+
+        while(moves.length > 0){
+            const [act, cami] = moves.shift()
+            const path = Array.isArray(cami) ? [...cami, act] : [act];
+            visited.add(act.toString())
+            
+
+            if(this.arrEqual(act, cords[1]))return path
+
+            for (const mv of future) {
+                const novo = this.sumArrs(act, mv)
+                if(novo != null && !visited.has(novo.toString())){
+                    visited.add(novo.toString())
+                    moves.push([novo, path])
                 }
             }
+
         }
-        return false
     }
 
-    displayBoard() {
-        console.log(this.squares.map(row => row.map(coord => `(${coord[0]}, ${coord[1]})`).join(' | ')).join('\n'));
+    sumArrs(arr, sarr){
+        const sum = [arr[0]+sarr[0], arr[1]+sarr[1]]
+        if((sum[0] >= 0 && sum[0] < 8) && (sum[1] >= 0 && sum[1] < 8))return sum
+        return null
+    }
+
+    arrEqual(arrA, arrB){
+        return (arrA[0] == arrB[0]) && (arrA[1] == arrB[1])
     }
 }
 
