@@ -1,0 +1,185 @@
+:root{
+  --background-color: #927fbf;
+  --light-color: #c4bbf0;
+  --dark-color: #4f3b78;
+  --main-black-color: #363b4e;
+  --submit-button-main: #E82561;
+  --submit-button-dark: #C30E59;
+  --edit-button-main: #B5FCCD;
+  --edit-button-dark: #7AC6D2;
+}
+
+body{
+  background-color: var(--background-color);
+}
+
+
+.form-cv-input{
+  min-height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  max-width: fit-content;
+}
+
+.form-cv-input:focus-visible{
+  outline-color: var(--main-black-color);
+}
+
+.form-cv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-cv label{
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.add-button{
+  margin-top: 20px;
+  width: 110px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--light-color);
+  font-weight: bold;
+}
+
+.add-button:hover{
+  background-color: var(--dark-color);
+  cursor: pointer;
+}
+
+.job-xp-field {
+  background-color: #f9f9f9; /* Cor de fundo leve */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+  margin: 20px 0; /* Margem superior e inferior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-xp-field div {
+  display: flex; /* Usar flexbox para alinhar os inputs */
+  align-items: center; /* Alinhar verticalmente ao centro */
+  margin-bottom: 15px; /* Espaçamento entre os inputs e o textarea */
+}
+
+.job-xp-field input[type="text"],
+.job-xp-field input[type="date"],
+.job-xp-field textarea {
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  margin-right: 10px; /* Espaçamento entre os inputs */
+  flex: 1; /* Fazer os inputs ocuparem o espaço disponível */
+}
+
+.job-xp-field input[type="date"] {
+  width: 150px; /* Largura fixa para os inputs de data */
+}
+
+.job-xp-field span {
+  margin: 0 10px; /* Espaçamento ao redor do span */
+  font-size: 18px; /* Tamanho da fonte do span */
+}
+
+.job-xp-field textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+.job-xp-field:hover{
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 20px 0px rgb(0 0 0 / 15%);
+}
+
+.submit-button{
+  margin-top: 20px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--submit-button-main);
+  font-weight: bold;
+  height: 40px;
+}
+
+.submit-button:hover{
+  background-color: var(--submit-button-dark);
+  cursor: pointer;
+}
+
+
+
+.cv-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-name {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cv-contact {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #555;
+}
+
+.cv-section {
+  margin-bottom: 20px;
+}
+
+.cv-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cv-job, .cv-education {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.cv-role, .cv-edu-name {
+  font-weight: bold;
+}
+
+.cv-details {
+  font-style: italic;
+  color: #666;
+}
+
+.cv-dates, .cv-edu-dates {
+  color: #999;
+}
+
+.cv-edit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--edit-button-main);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.cv-edit-button:hover {
+  background-color: var(--edit-button-dark);
+}

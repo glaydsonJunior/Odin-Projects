@@ -17,21 +17,20 @@ class Gameboard {
         ]
         const moves = [[cords[0],[]]]
         let temp = moves[0][0].toString()
-        let visited = new Set();
-        visited.add(temp)
+        let visited = {temp: true};
 
         while(moves.length > 0){
             const [act, cami] = moves.shift()
             const path = Array.isArray(cami) ? [...cami, act] : [act];
-            visited.add(act.toString())
+            visited[act.toString()] = true
             
 
             if(this.arrEqual(act, cords[1]))return path
 
             for (const mv of future) {
                 const novo = this.sumArrs(act, mv)
-                if(novo != null && !visited.has(novo.toString())){
-                    visited.add(novo.toString())
+                if(novo != null && !visited[novo.toString()]){
+                    visited[novo.toString()] = true
                     moves.push([novo, path])
                 }
             }

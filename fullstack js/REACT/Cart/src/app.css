@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usando Flexbox para alinhar os itens horizontalmente */
+}
+
+.navbar li {
+    flex: 1; /* Faz com que os itens ocupem espaço igual */
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.navbar p {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin: 0px;
+}

@@ -1,0 +1,38 @@
+/* Estilo para o container do checkout */
+.checkout-container {
+    display: flex; /* Usar flexbox para layout horizontal */
+    flex-direction: column; /* Colocar os cards em coluna */
+    margin: 20px; /* Margem ao redor do container */
+}
+
+/* Estilo para cada card de checkout */
+.card-checkout {
+    display: flex; /* Usar flexbox para o card */
+    align-items: center; /* Alinhar itens verticalmente ao centro */
+    background-color: #f9f9f9; /* Cor de fundo do card */
+    border: 1px solid #ddd; /* Borda do card */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem entre os cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+/* Estilo para a imagem do produto */
+.card-checkout img {
+    max-width: 100px; /* Largura máxima da imagem */
+    height: auto; /* Manter a proporção da imagem */
+    border-radius: 4px; /* Bordas arredondadas na imagem */
+    margin-right: 15px; /* Espaçamento à direita da imagem */
+}
+
+/* Estilo para o título do produto */
+.card-checkout h4 {
+    font-size: 1.2em; /* Tamanho da fonte do título */
+    margin: 0; /* Remover margens padrão */
+}
+
+/* Estilo para a categoria e preço */
+.card-checkout p {
+    margin: 5px 0; /* Margem acima e abaixo dos parágrafos */
+    color: #555; /* Cor do texto */
+}
