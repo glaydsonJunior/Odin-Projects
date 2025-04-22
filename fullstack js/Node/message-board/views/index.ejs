@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MESSAGES</h1>
+    <% messages.forEach(function(msg){ %>
+        <div class="message">
+            <p class="message-text"><%= msg.text %></p>
+            <p class="message-user"><%= msg.user %></p>
+            <p class="message-date"><%= msg.date %></p>
+        </div>        
+    <% }) %>
+
+    <form action="/new" method="post" class="message-form">
+        <input type="text" name="text" id="text" placeholder="Text..." required />
+        <input type="text" name="user" id="user" placeholder="User ..." required />
+        <button type="submit">ADD</button>
+    </form>
+</body>
+</html>
