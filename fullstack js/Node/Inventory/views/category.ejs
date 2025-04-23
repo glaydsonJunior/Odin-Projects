@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Management</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Category Management</h1>
+    <div>
+        <h2>Available Categories</h2>
+        <% categories.forEach(cat => { %>
+            <p><%= cat.category_name %></p>
+        <% }) %>
+    </div>
+
+    <div class="container">
+        <h2>Add New Category</h2>
+        <form action="/category/add" method="post">
+            <input type="text" placeholder="Category name..." name="category_name" required>
+            <button type="submit">ADD</button>
+        </form>
+
+        <h2>Update Category</h2>
+        <form action="/category/update" method="post">
+            <select name="category_selected" required>
+                <% categories.forEach(cat => { %>
+                    <option value="<%= cat.category_name %>"> <%= cat.category_name %> </option>
+                <% }) %>
+            </select>
+            <input type="text" placeholder="New category name..." name="new_name" required>
+            <button type="submit">EDIT</button>
+        </form>
+
+        <h2>Delete Category</h2>
+        <form action="/category/delete" method="post">
+            <select name="category_selected" required>
+                <% categories.forEach(cat => { %>
+                    <option value="<%= cat.id %>"> <%= cat.category_name %> </option>
+                <% }) %>
+            </select>
+            <button type="submit">DELETE</button>
+        </form>
+    </div>
+
+    <div class="navigation">
+        <a href="/">Go to Products</a>
+    </div>
+</body>
+</html>
