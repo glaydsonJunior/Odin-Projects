@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <% if(user != undefined){ %>
+            <a href="/upgrade">Become Member</a>
+            <a href="/logout">Logout</a>
+        <%}else{%>
+            <a href="/login">Login</a>
+        <%}%>
+    </div>
+
+    <div class="container-posts">
+        <% if(user != undefined){ %>
+            <form action="/msg" method="post">
+                <textarea class="textarea" placeholder="Escreva seu post aqui..." name="message_post"></textarea>
+                <button>POST</button>
+            </form>
+        <%}%>
+        
+        <% if(user != undefined){ %>
+        <div class="posts">
+            <% posts.forEach(post => { %>
+                <div class="post">
+                    <% if(user.member){%>
+                        <strong><%= post.username %>:</strong><%= post.msg %>.
+                    <%} else {%>
+                        <strong>Anonymous:</strong><%= post.msg %>.
+                    <%}%>
+                </div>
+            <% }) %>
+        </div>
+        <%}%>
+    </div>
+</body>
+</html>

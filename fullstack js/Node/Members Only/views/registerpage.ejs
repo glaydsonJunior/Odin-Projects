@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registro</h2>
+        <form action="/register" method="post">
+            <input type="text" placeholder="Username" name="register_username" required>
+            <input type="password" placeholder="Password" name="register_password" required>
+            <input type="password" placeholder="Confirm Password" name="register_confirm_password" required>
+            <button type="submit">Registrar</button>
+        </form>
+        <div class="login-link">
+            <p>Já tem uma conta? <a href="/login">Faça login aqui</a></p>
+        </div>
+    </div>
+</body>
+</html>
