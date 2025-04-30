@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <form action="/delete/folder" method="post">
+        <button>DELETE</button>
+    </form>
+
+    <form action="/update/folder" method="post">
+        <input type="text" value="<%= acFolder %>" name="new_name_folder" required/>
+        <button>UPDATE</button>
+    </form>
+
+    <form action="/folder" method="post" enctype="multipart/form-data">
+        <input type="file" name="file_upload" required />
+        <button>UPLOAD</button>
+    </form>
+
+    <div>
+        <% if(files != null) {%>
+            <% files.forEach(file => { %>
+                <a href="/download?file=<%= file.filename %>"><%= file.filename %></a>
+            <% }) %>
+        <% } %>
+    </div>
+    <a href="/home">Home</a>
+</body>
+</html>

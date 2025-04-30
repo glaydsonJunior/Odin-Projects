@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <form action="/home" method="post">
+        <input type="text" name="new_folder_name" placeholder="New folder name" required>
+        <button>ADD</button>
+    </form>
+
+    <div>
+        <% if(folders != null) {%>
+            <% folders.forEach(folder => { %>
+                <a href="/folder?f=<%= folder.folder_name %>"><%= folder.folder_name %></a>
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

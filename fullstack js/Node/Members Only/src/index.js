@@ -21,11 +21,6 @@ async function registerUser(usr, pass){
     return registerQuery
 }
 
-
-function updateSessionUserMember(){
-
-}
-
 async function getUser(usr, pass) {
     const loginQuery = `SELECT * FROM users WHERE username='${usr}'`
     const userObj = await psql.query(loginQuery).then(result=>{return result.rows[0]})
