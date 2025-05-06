@@ -86,16 +86,47 @@ export class ApiService{
                 title:true,
                 filename:true,
                 date: true,
-                comments: true
+                comments: {
+                    select: {
+                        user_id: {
+                            select: {
+                                username: true
+                            },
+                        },
+                        content: true,
+                        date: true
+                    }
+                },
             },
-            select:{
+            where:{
                 title: title
             }
         })
+
+        if(postResult != null){
+            const transformedComments = postResult.comments.map(comment => ({
+                user: comment.user_id.username,
+                content: comment.content,
+                date: comment.date
+            }));
+            postResult.comments = transformedComments
+        }
+        
         return postResult
     }
 
 
+    async getPostIdByTitle(title){
+        const resultID = await this.prisma.posts.findUnique({
+            select:{
+                id:true
+            },
+            where: {
+                title: title
+            }
+        })
+        return resultID
+    }
 
     async changeViewPost(title, action){
         if(action === 'on' || action === 'off'){
