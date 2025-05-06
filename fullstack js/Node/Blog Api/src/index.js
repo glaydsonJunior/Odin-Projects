@@ -18,8 +18,14 @@ app.use(e.json());
 app.use(e.urlencoded({ extended: true }));
 
 app.get('/blog/api/all/posts', async(req, res)=>{
-    const r = await api.getAllPosts()
-    res.send(r)
+    const tokenObj = getJWT(req.headers.authorization.split(' ')[1])
+    if(tokenObj.id === 1){
+        const r = await api.getAllPosts()
+        res.send(r)
+    } else {
+        res.status(403)
+        res.send({message: "Acess Denied!"})
+    }
 })
 
 app.get('/blog/api/view/posts', async(req, res)=>{
@@ -81,6 +87,18 @@ app.post('/blog/api/comment/post', async(req, res)=>{
     const tokenObj = getJWT(req.headers.authorization.split(' ')[1])
     api.createComment(postID.id, tokenObj.id, req.body.content)   
     res.send(tokenObj)
+})
+
+
+app.put('/blog/api/publish/post', (req, res)=>{
+    const tokenObj = getJWT(req.headers.authorization.split(' ')[1])
+    if(tokenObj.id === 1 && (req.body.action == 'on' || req.body.action == 'off')){
+        api.changeViewPost(req.body.title, req.body.action)
+        res.send({message: `Now post are ${(req.body.action=='on')?'visible':'hidden'}`})
+    } else {
+        res.status(403)
+        res.send({message: "Acess Denied!"})
+    }
 })
 
 app.listen(8000, ()=>{
